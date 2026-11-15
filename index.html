@@ -9,7 +9,7 @@
 <meta property="og:description" content="Clear the noise. Find your direction. Take the next step.">
 <meta name="theme-color" content="#0a0a0b">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -20,7 +20,101 @@
   <a class="btn btn-gold" href="#join">Get early access</a>
 </div></nav>
 
-<header class="hero" data-section="hero"><div class="wrap">
+<section class="orbit-hero" id="top" aria-label="Kenovus">
+  <div class="orbit-art">
+    <svg id="orbit-svg" viewBox="0 0 680 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="orbit-title">
+      <title id="orbit-title">Kenovus</title>
+      <defs>
+        <path id="tp" d="M 340 145 m -282 0 a 282 78 0 1 1 564 0 a 282 78 0 1 1 -564 0" fill="none"/>
+        <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="rgba(110,82,14,0)"/>
+          <stop offset="12%"  stop-color="rgba(152,112,28,0.28)"/>
+          <stop offset="38%"  stop-color="rgba(194,152,54,0.80)"/>
+          <stop offset="56%"  stop-color="rgba(212,172,72,0.95)"/>
+          <stop offset="80%"  stop-color="rgba(158,118,36,0.30)"/>
+          <stop offset="100%" stop-color="rgba(110,82,14,0)"/>
+        </linearGradient>
+        <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#EEE090"/>
+          <stop offset="26%"  stop-color="#DBBA43"/>
+          <stop offset="55%"  stop-color="#C9A84C"/>
+          <stop offset="100%" stop-color="#9A7A18"/>
+        </linearGradient>
+        <filter id="gl"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="gllg"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="wf"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+  <!-- Background glow -->
+  <ellipse cx="340" cy="145" rx="230" ry="68" fill="rgba(58,33,2,0.30)">
+    <animate attributeName="opacity" values="0.65;1;0.65" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Stars -->
+  <circle cx="52"  cy="32"  r="0.9" fill="#C9A84C"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="614" cy="25"  r="1.0" fill="#C9A84C"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="4.1s" repeatCount="indefinite"/></circle>
+  <circle cx="652" cy="240" r="0.8" fill="#C9A84C"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="36"  cy="255" r="0.9" fill="#C9A84C"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="3.7s" repeatCount="indefinite"/></circle>
+  <circle cx="660" cy="130" r="0.7" fill="#C9A84C"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="5.0s" repeatCount="indefinite"/></circle>
+  <circle cx="20"  cy="140" r="0.8" fill="#C9A84C"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="3.9s" repeatCount="indefinite"/></circle>
+  <circle cx="340" cy="14"  r="0.7" fill="#C9A84C"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.4s" repeatCount="indefinite"/></circle>
+  <!-- Orbit ring -->
+  <g transform="rotate(-12, 340, 145)">
+    <ellipse cx="340" cy="145" rx="284" ry="80" fill="none" stroke="url(#rg)" stroke-width="1.7"/>
+    <ellipse cx="340" cy="145" rx="284" ry="80" fill="none" stroke="url(#rg)" stroke-width="0.7" opacity="0.30" transform="translate(0,9)"/>
+  </g>
+  <!-- Wordmark inside orbit -->
+  <text x="340" y="166"
+    font-family="'Cormorant Garamond',Georgia,serif"
+    font-weight="300" font-size="82" letter-spacing="7"
+    text-anchor="middle" fill="url(#wg)" filter="url(#wf)">KEN&#x14C;VUS</text>
+  <!-- Hairline rule -->
+  <line x1="130" y1="185" x2="550" y2="185" stroke="rgba(201,168,76,0.33)" stroke-width="0.7"/>
+  <!-- Constellation dots -->
+  <circle cx="384" cy="108" r="3.8" fill="rgba(242,218,142,0.85)" filter="url(#gl)"/>
+  <circle cx="350" cy="102" r="2.7" fill="rgba(228,196,118,0.63)" filter="url(#gl)"/>
+  <circle cx="366" cy="94"  r="2.3" fill="rgba(218,185,105,0.53)" filter="url(#gl)"/>
+  <circle cx="400" cy="114" r="2.5" fill="rgba(224,190,110,0.57)" filter="url(#gl)"/>
+  <circle cx="333" cy="110" r="1.9" fill="rgba(208,174,95,0.41)"  filter="url(#gl)"/>
+  <g opacity="0.38" stroke="rgba(200,162,55,1)" stroke-width="0.8">
+    <line x1="384" y1="108" x2="350" y2="102"/>
+    <line x1="384" y1="108" x2="366" y2="94"/>
+    <line x1="384" y1="108" x2="400" y2="114"/>
+    <line x1="350" y1="102" x2="366" y2="94"/>
+    <line x1="366" y1="94"  x2="400" y2="114"/>
+    <line x1="333" y1="110" x2="350" y2="102"/>
+  </g>
+  <!-- Apex star -->
+  <circle cx="460" cy="88" r="5.5" fill="rgba(255,245,195,0.95)" filter="url(#gllg)"/>
+  <circle cx="460" cy="88" r="2.8" fill="rgba(255,250,215,1)"/>
+  <circle cx="460" cy="88" r="15" fill="none" stroke="rgba(201,168,76,0.18)" stroke-width="1">
+    <animate attributeName="r" values="11;20;11" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.55;0.08;0.55" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Traveler 1 + trail -->
+  <circle r="5.0" fill="rgba(255,248,196,0.96)" filter="url(#gllg)">
+    <animateMotion dur="11s" repeatCount="indefinite"><mpath href="#tp"/></animateMotion>
+  </circle>
+  <circle r="3.0" fill="rgba(226,196,118,0.50)">
+    <animateMotion dur="11s" begin="-0.4s" repeatCount="indefinite"><mpath href="#tp"/></animateMotion>
+  </circle>
+  <circle r="1.8" fill="rgba(201,168,76,0.28)">
+    <animateMotion dur="11s" begin="-0.75s" repeatCount="indefinite"><mpath href="#tp"/></animateMotion>
+  </circle>
+  <!-- Traveler 2 -->
+  <circle r="3.0" fill="rgba(226,196,118,0.56)">
+    <animateMotion dur="11s" begin="-3.67s" repeatCount="indefinite"><mpath href="#tp"/></animateMotion>
+  </circle>
+  <!-- Traveler 3 -->
+  <circle r="2.2" fill="rgba(201,168,76,0.38)">
+    <animateMotion dur="11s" begin="-7.33s" repeatCount="indefinite"><mpath href="#tp"/></animateMotion>
+  </circle>
+</svg>
+  </div>
+  <p class="orbit-tag">Connect Every Point. Optimize Every Life.</p>
+  <a class="orbit-btn" href="#join">Get started</a>
+  <a class="orbit-scroll" href="#start" aria-label="Scroll to learn more"><span>Scroll</span><i></i></a>
+</section>
+
+<header class="hero" id="start" data-section="hero"><div class="wrap">
   <div class="reveal">
     <div class="eyebrow">The science of you</div>
     <h1 style="margin-top:18px">Built around <em>you.</em></h1>

@@ -29,3 +29,10 @@ form.addEventListener('submit',async e=>{
   }catch(_){status.classList.add('error');status.textContent='Sorry, we couldn’t save your spot just now. Please try again, or email lance@kenovus.com.'}
   finally{clearTimeout(timer);submit.disabled=false}
 });
+
+// Orbit hero: respect reduced motion, and pause the SMIL animation when off-screen.
+(function(){const s=document.getElementById('orbit-svg');if(!s||!s.pauseAnimations)return;
+const mq=window.matchMedia('(prefers-reduced-motion: reduce)');let vis=true;
+function sync(){if(mq.matches){s.setCurrentTime(1.6);s.pauseAnimations()}else if(vis){s.unpauseAnimations()}else{s.pauseAnimations()}}
+if('IntersectionObserver' in window)new IntersectionObserver(es=>{vis=es[0].isIntersecting;sync()}).observe(s);
+mq.addEventListener?mq.addEventListener('change',sync):mq.addListener(sync);sync()})();
